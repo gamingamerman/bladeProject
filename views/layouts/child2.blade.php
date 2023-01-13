@@ -15,9 +15,14 @@
         @include('layouts.fruta')
     @empty
         @include('layouts.vacio', ['elementos' => 'frutas'])
-        @includeIf('layouts.nohay', ['elementos' => 'verdura'])
+        {{-- @includeIf('layouts.nohay', ['elementos' => 'verdura'])
         @includeWhen($boolean, 'view.name', ['some' => 'data'])
         @includeUnless($boolean, 'view.name', ['some' => 'data'])
-        @includeFirst(['view.name', 'variable'], ['some' => 'data'])
+        @includeFirst(['view.name', 'variable'], ['some' => 'data']) --}}
     @endforelse
+    <script>
+        console.log('hello world');
+        let frutas = @json($frutas);
+        console.log(frutas)
+    </script>
 @endsection
