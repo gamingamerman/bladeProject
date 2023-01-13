@@ -1,0 +1,7 @@
+{
+    "name": "dsw/blade",
+    "type": "project",
+    "require": {
+        "philo/laravel-blade": "^3.1"
+    }
+}
