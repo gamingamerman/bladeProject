@@ -1,7 +1,12 @@
 {
     "name": "dsw/blade",
     "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Dsw\\Blade\\": "src/"
+        }
+    },
     "require": {
-        "philo/laravel-blade": "^3.1"
+        "illuminate/database": "^8.83"
     }
 }
