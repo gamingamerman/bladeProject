@@ -1,1 +1,1 @@
-<h3>No hay elementos.</h3>
+<h2>No hay {{$elementos}}</h2>

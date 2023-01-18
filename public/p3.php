@@ -1,5 +1,4 @@
-!<?php
-
+<?php
 require '../vendor/autoload.php';
 
 use Philo\Blade\Blade;
@@ -9,8 +8,7 @@ $cache = '../cache';
 
 $blade = new Blade($views, $cache);
 
- $frutas = ['Manzanas', 'Pera', 'Arándanos', 'Uvas', 'Cocks'];
-// $frutas = [];
-
+$frutas = ['manzana', 'pera', 'uva', 'sandía', 'mandarina'];
+//$frutas = [];
 
 echo $blade->view()->make('layouts.child2', compact('frutas'))->render();

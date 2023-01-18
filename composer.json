@@ -1,12 +1,24 @@
 {
     "name": "dsw/blade",
+    "description": "Pruebas con las plantillas blade",
     "type": "project",
+    "require": {
+        "philo/laravel-blade": "^3.1",
+        "illuminate/database": "^5.5"
+    },
     "autoload": {
         "psr-4": {
             "Dsw\\Blade\\": "src/"
         }
     },
-    "require": {
-        "illuminate/database": "^8.83"
+    "authors": [
+        {
+            "name": "Yo"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
     }
 }

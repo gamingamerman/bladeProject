@@ -1,5 +1,4 @@
 <?php
-
 require '../vendor/autoload.php';
 
 use Philo\Blade\Blade;
@@ -9,9 +8,11 @@ $cache = '../cache';
 
 $blade = new Blade($views, $cache);
 
-$titulo = 'Este es el titulo';
+$titulo = "Este es el titulo";
+$nombre = "Pepe Pepón";
 $edad = 12;
-$maximo = 15;
-$aficiones = ['PHP', 'Javascript', 'fuck niggers'];
-
-echo $blade->view()->make('master', compact('titulo', 'edad', 'maximo', 'aficiones'))->render();
+$maximo = 3;
+//$aficiones = ['PHP', 'Javascript', 'Blade', 'AJAX'];
+$aficiones = [];
+//echo $blade->view()->make('plantilla1', ['nombre' => $nombre, 'titulo' => $titulo])->render();
+echo $blade->view()->make('plantilla1', compact('nombre','titulo','edad','maximo', 'aficiones'))->render();

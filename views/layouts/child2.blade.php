@@ -1,28 +1,24 @@
 @extends('layouts.master')
 
-@section('titulo', '')
-    
+@section('titulo', 'Pagina Frutas')
+
 @section('menu')
-@parent
-<ul>
-    <li><a href="#">Proveedores</a></li>
-    <li><a href="#">Sección 2</a></li>
-</ul>
+  @parent
+  <ul>
+    <li><a href="#">Manzana</a></li>
+    <li><a href="#">Sandía</a></li>
+  </ul> 
 @endsection
 
 @section('contenido')
-    @forelse ($frutas as $fruta)
-        @include('layouts.fruta')
-    @empty
-        @include('layouts.vacio', ['elementos' => 'frutas'])
-        {{-- @includeIf('layouts.nohay', ['elementos' => 'verdura'])
-        @includeWhen($boolean, 'view.name', ['some' => 'data'])
-        @includeUnless($boolean, 'view.name', ['some' => 'data'])
-        @includeFirst(['view.name', 'variable'], ['some' => 'data']) --}}
-    @endforelse
-    <script>
-        console.log('hello world');
-        let frutas = @json($frutas);
-        console.log(frutas)
-    </script>
+  @forelse ($frutas as $fruta)
+      @include('layouts.fruta')
+  @empty
+      @include('layouts.vacio', ['elementos' => 'frutas'])
+  @endforelse
+  <script>
+    console.log('hola mundo');
+    let frutas = @json($frutas, JSON_PRETTY_PRINT););
+    console.log(frutas);
+  </script>
 @endsection

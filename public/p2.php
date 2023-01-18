@@ -1,5 +1,4 @@
-!<?php
-
+<?php
 require '../vendor/autoload.php';
 
 use Philo\Blade\Blade;

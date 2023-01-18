@@ -1,1 +1,0 @@
-<h3>No hay elementos.</h3><?php /**PATH /var/www/bladeProject/views/layouts/vacio.blade.php ENDPATH**/ ?>
